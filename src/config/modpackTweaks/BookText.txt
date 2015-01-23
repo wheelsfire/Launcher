@@ -1,0 +1,160 @@
+**This is the file that Modpack Tweaks reads its info from, it is used for changelogs and information on the modpack**
+**To add to the file, type what you want, and separate pages by using the phrase ~~~ **
+**The code will interpret "~~~" as a page break, and format the book accordingly**
+**In addition, adding a "~" to the end of a line will add a line break**
+**Two asterisks at the beginning of a line is a comment**
+**Three asterisks and a number will skip that amount of lines following**
+
+***12
+Example:
+This is some very useful info
+And I am typing it on multiple lines
+to make this text file easier to read.
+These lines don't have line breaks between them
+in the book though because they don't end with "~".
+~~~
+Now I am on page 2~
+Now I am one line down~
+~
+Now I am after a blank line
+
+**Begin book text after asterisks**
+****************************************************************************
+~
+~
+~
+~
+~
+And so,~
+ thy journey begineth.
+~~~
+Hello and welcome to §oTranquility 2§r, a very poorly named modpack!~
+~
+Thank you for taking your time to purchase this guidebook.~
+~
+We hope that it will serve you faithfully in the years to come!~
+~
+~
+~
+~
+~
+~
+                    potato
+~~~
+§nMekanism has awful textures!§r~
+~
+A certain banana fanatic has requested Mekanism be added.~
+~
+So here you go!~
+~
+In addition, alternate recipes have been added for the Digital Miner and upgrades.
+~~~
+§nAdvertisement§r~
+~
+Want to smelt just one item?~
+~
+Think using coal for it is a waste?~
+~
+Worry no more! Just lightly tap a piece of coal or charcoal with a Carpenter's Hammer to break it into small pieces!~
+~~~
+§nPSA: Obsidian Ingots§r~
+~
+Obsidian ingots that come out of a smeltery are simply too impure to be used in the production of machines.~
+~
+The Obsidian dust will have to be purified and refined before it is fit for use in mechanisms.
+~~~
+§nAdvertisement§r~
+~
+Try the §lCharred Potato§r today!~
+~
+It's really §2nutritious§0!~
+~
+And as a bonus, it is four times more potent than coal!
+~~~
+§nDonator Tokens§r~
+~
+Are you a streamer that opens Lucky Blocks for donations?~
+~
+We at Road Industries accomodate this by supplying you with a strongbox full of §lDonator Tokens§r!~
+~~~
+§nDonator Tokens, ctd.§r~
+~
+These tokens can be exchanged in your crafting grid for three kinds of Lucky Blocks, as well as the fabled §mbanana§r Pandora's Box!~
+~
+§oOur bananas are currently out of stock. Please check back again later!§r
+~~~
+§nThe Ugly Barnacle§r~
+~
+Once there was an ugly barnacle.~
+~
+He was so ugly that everyone died.~
+~
+The End.
+~~~
+~
+~
+~
+~
+~
+That story didn't really help at all now did it?
+~~~
+§nDungeons of DOOM!§r~
+~
+Legends have told of great dungeons beneath the earth, conquered by heroes long passed.~
+~
+Some say these dungeons still lurk the depths, waiting to be found.
+~~~
+§nNotice§r~
+~
+Please report all known duplication bugs to Road Industries.~
+~
+Unless it's from Project E. Go nuts with that.~
+~~~
+§nDisclaimer§r~
+~
+All advice, information, comments, jokes, cabbages etc are of the author's making and in no way represent the opinion of Road Industries.~
+~~~
+§nDisclaimer§r~
+~
+Actual mileage may vary. Price does not include tax, title or license. Some assembly required. Each sold seperately. Batteries not included. If conditions still persist, wash eyes under tap water and contact your physician.
+~~~
+§nLegal Notice§r~
+~
+Reading this message constitutes your unconditional acceptance of agreement with all terms, conditions, conclusions, carrots and opinions, either expressed or implied, as interpreted by the author without further clarification. Use of any information contained herein [inclusive of any and all attachments] or omitted in part or in whole from the actual message is strictly prohibited and will be subject to collection of significant financial damages. By reading (and thus accepting) these terms you agree to forfeit your soul. If you can read this you must have your window really large. Now I will fill this with useless text. Potato. Never gonna give you up, never gonna let you down, never gonna run around and desert you. Never gonna make you cry, never gonna say goodbye, never gonna tell a lie and hurt you. Bla bla bla bla bla bla bla. I smell a rat and just in case, I set up traps and you're the bait! Insert laughter here. Installing windows is a pane in the glass. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec adipiscing felis quis purus posuere, et lobortis risus facilisis. Suspendisse ut mauris enim. Sed in tincidunt nibh, a lobortis dui. Donec ante metus, tempus ut urna at, molestie pretium eros. Mauris aliquet ipsum massa, sit amet consequat sem scelerisque eu. Proin at tempor urna, ac viverra est. Morbi ornare ornare condimentum. Proin eu pharetra metus. Sed odio lacus, pharetra nec justo at, eleifend fringilla augue. Vivamus blandit tempor sem quis commodo. Maecenas viverra, urna a fringilla ullamcorper, lorem augue blandit magna, ac feugiat sapien eros sit amet sapien. Cras molestie libero ipsum, tristique convallis nibh fringilla vel. Pellentesque orci nisl, adipiscing vitae turpis et, tempus volutpat nibh. Mauris tellus dolor, dapibus iaculis nisl eu, varius facilisis arcu.
+~~~
+§nWarranty§r~
+~
+This guidebook comes with no warranty whatsoever.~
+~
+In fact it might even be lying, we can't really know for sure.~
+~
+No refunds!
+~~~
+§nNotice§r~
+~
+We at Road Industries care for the environment.~
+~
+Please dispose of this guide responsibly.~
+~
+Or at least recycle it or something.
+~~~
+§nNotice§r~
+~
+Please direct all complaints to the front desk shredder at Road Industries Headquarters. All messages will be processed in the order recieved.~
+For more information, please visit §9§npotato.nightstone.net/~
+Tranquility§r§f
+~~~
+~
+~
+      Tranquility 2~
+        Guidebook~
+~
+        Edition 1.1~
+~
+~
+~
+~
+~
+Publisher:~
+Road Industries~
+ISBN: 978-0881929997

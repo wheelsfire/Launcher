@@ -1,0 +1,1043 @@
+5.1.0
+
+WARNING:
+
+The first line indicates the version of this file.
+If it does not match the version of the mod, this file will be replaced.
+Backup this file if you want to keep any changes you made to it.
+
+Instruction on how to customize the Lucky Block might be added
+For now, look at everything below the '>drops' line to understand the syntax.
+
+~SPAWNRATE/STRUCTURECHANCE~
+
+The spawnrate means the Lucky Block will have a 1 in (spawnrate) chance of spawning per chunk.
+This means the smaller the spawnrate, the more likely it is to spawn. Set it to 0 to prevent natural spawning.
+The structureChance means every time the Lucky Block spawns it will have a 1 in (structureChance) chance of spawning within a structure.
+
+~RECIPE~
+
+To configure the recipe, use the first 3 groups of letters to show what the recipe will look like in the crafting table.
+A space instead of a letter will indicate that nothing goes there. Then, match each letter to it's appropriate item/block.
+Look below to understand. for no recipe, don't put anything below the recipe line.
+
+>properties
+spawnrate=200
+structureChance=2
+recipe=ggg,gdg,ggg,g,gold_ingot,d,dropper
+doDropsOnCreativeMode=true
+
+>craftingitems
+diamond=12
+diamond_block=100
+emerald=8
+emerald_block=80
+gold_ingot=6
+gold_block=60
+iron_ingot=3
+iron_block=30
+
+golden_carrot=30
+golden_apple,0=40
+golden_apple,1=100
+nether_star=100
+
+rotten_flesh=-5
+spider_eye=-10
+fermented_spider_eye=-20
+poisonous_potato=-10
+fish,3=-20
+
+>drops
+/========== TOOLS & ARMOR ==========
+
+/all wood, stone and gold tools
+group(ID=wooden_sword;ID=wooden_shovel;ID=wooden_pickaxe;ID=wooden_axe;ID=wooden_hoe)@luck=0
+group(ID=stone_sword;ID=stone_shovel;ID=stone_pickaxe;ID=stone_axe;ID=stone_hoe)@luck=0
+group(ID=golden_sword;ID=golden_shovel;ID=golden_pickaxe;ID=golden_axe;ID=golden_hoe)@luck=1
+/2-3 iron tools
+group:#random-2-3(ID=iron_shovel;ID=iron_pickaxe;ID=iron_axe;ID=iron_sword;ID=iron_hoe)@luck=1
+/1-2 diamond tools
+group:#random-1-2(ID=diamond_sword;ID=diamond_shovel;ID=diamond_pickaxe;ID=diamond_axe;ID=diamond_hoe)@luck=2
+/all leather and gold armor
+group(ID=leather_helmet;ID=leather_chestplate;ID=leather_leggings;ID=leather_boots)@luck=0
+group(ID=golden_helmet;ID=golden_chestplate;ID=golden_leggings;ID=golden_boots;ID=golden_horse_armor)@luck=1
+/2-3 chain and iron armor
+group:#random-2-3(ID=chainmail_helmet;ID=chainmail_chestplate;ID=chainmail_leggings;ID=chainmail_boots)@luck=2
+group:#random-2-3(ID=iron_helmet;ID=iron_chestplate;ID=iron_leggings;ID=iron_boots;ID=iron_horse_armor)@luck=1
+/1-2 diamond armor
+group:#random-1-2(ID=diamond_helmet;ID=diamond_chestplate;ID=diamond_leggings;ID=diamond_boots;ID=diamond_horse_armor)@luck=2
+/all horse armor
+group(ID=iron_horse_armor;ID=golden_horse_armor;ID=diamond_horse_armor)@luck=2
+/bow and arrows
+group(ID=bow;ID=arrow,amount=#random-16-32)@luck=1
+
+/========== BLOCKS ==========
+
+ID=sponge@luck=0
+ID=tnt,amount=8@luck=1
+ID=obsidian,amount=14@luck=1
+ID=enchanting_table@luck=2
+ID=end_portal_frame,amount=#random-2-6@luck=2
+ID=dragon_egg@luck=1
+ID=ender_chest,amount=2@luck=0
+ID=beacon@luck=2
+ID=dropper,amount=8@luck=0
+ID=hay_block,amount=8@luck=0
+
+/========= ITEMS ==========
+
+ID=gold_ingot,amount=#random-8-16@luck=1
+ID=stick@luck=-1
+ID=painting,amount=4@luck=0
+ID=saddle,amount=2@luck=0
+ID=cake@luck=0
+ID=rotten_flesh@luck=-1
+ID=nether_star@luck=2
+ID=red_flower,NBTTag=(display=(Name="#cRomantic Rose"))@luck=-1
+
+/Enderchest
+ID=EnderStorage:enderChest,amount=2
+/Endertank
+ID=EnderStorage:enderChest,damage=4096,amount=2
+/Walrus
+ID=extracells:walrus
+/LandMine
+ID=TConstruct:Redstone.Landmine,amount=#random-1-4
+/Chandellier
+ID=ExtraUtilities:chandelier
+/gold spike
+ID=ExtraUtilities:spike_base_gold,amount=#random-0-15
+/Green Screen
+ID=ExtraUtilities:greenscreen,damage=5,amount=#random-0-64
+/Etheral Bloom
+ID=Thaumcraft:blockCustomPlant,damage=4,amount=30
+/Carpenters Blocks
+ID=CarpentersBlocks:blockCarpentersBlock,amount=#random-0-128
+/Critter Snare
+ID=witchery:crittersnare
+/Big Button
+ID=OpenBlocks:bigbutton,amount=3
+/Ghostwood Sapling
+ID=Natura:florasapling,damage=4
+/Link modifier
+ID=Mystcraft:BlockLinkModifer
+/Storage Cell
+ID=appliedenergistics2:item.ItemBasicStorageCell.1k,amount=4
+/Essence Pickaxe
+ID=magicalcrops:magicalcrops_ZivicioPickaxe
+/Ender Porter
+ID=BiomesOPlenty:enderporter
+/Diabloist 
+ID=ForbiddenMagic:DiabloistFork
+/Golden Bag of holding
+ID=ExtraUtilities:golden_bag
+/Golden Egg
+ID=OpenBlocks:goldenegg,amount=2
+/Enchanted Broom
+ID=witchery:ingredient,damage=9
+/polynesia Charm
+ID=witchery:polynesiacharm
+/Blightberry
+ID=ore:cropBlightberry,amount=#random-1-8
+/hang glider
+ID=OpenBlocks:hangglider
+/Florb Spring water
+ID=ThermalExpansion:florb,amount=#random-0-15
+/Computer
+ID=ore:oc:case1
+/Thaum door
+ID=Thaumcraft:ItemArcaneDoor
+/EE3 Minimum
+ID=ProjectE:item.pe_philosophers_stone
+/Destruction Catalyst
+ID=xreliquary:destruction_catalyst
+/Dragon claw
+ID=xreliquary:dragon_claws
+/Emperor's Chalice
+ID=xreliquary:empereror_chalice
+/Ender Staff
+ID=xreliquary:ender_staff
+/Coin of Fortune
+ID=xreliquary:fortune_coin
+/Glowing Bread
+ID=xreliquary:glowing_bread,amount=#random-1-20
+/Lantern Of Paranoia
+ID=xreliquary:lantern_of_paranoia
+/Phoenix Down
+ID=xreliquary:phoenix_down
+/Lilypad of Fertility
+ID=xreliquary:lilypad,amount=#1-20
+/Energy Condensor
+ID=ProjectE:Condenser
+/Interdiction Torch
+ID=ProjectE:Interdiction Torch,amount=#random-0-4
+/Energy collector
+ID=ProjectE:Collector MK1
+/Octulple
+ID=ore:compressedCobblestone8x
+/LOLNOPE
+ID=OpenBlocks:tank,amount=#random-0-12
+//ULTIMATE FURNACE
+ID=magicalcrops:magicalcrops_UltimateFurnace
+//Ultimate apples
+ID=magicalcrops:magicalcrops_UltimateApple
+//Zivicio Bow
+ID=magicalcrops:magicalcrops_ZivicioBow
+/========== GROUPS ==========
+/Compact machine
+group(ID=CompactMachines:machine,damage=2;ID=CompactMachines:psd)
+/bookshelves and books
+group(ID=bookshelf,amount=#random-6-12;ID=book,amount=#random-8-16)@luck=0
+/pumpkins and jack o'lanterns
+group(ID=pumpkin,amount=#random-8-16;ID=lit_pumpkin,amount=#random-8-16)@luck=0
+/golden apples
+group(ID=golden_apple,amount=#random-2-4;ID=golden_apple,amount=#random-1-2,damage=1)@luck=2
+/buckets
+group(ID=bucket,amount=#random-1-2;ID=water_bucket,amount=#random-1-2;ID=lava_bucket,amount=#random-1-2;ID=milk_bucket,amount=#random-1-2)@luck=0
+/meat (raw and cooked)
+group:1(group(ID=porkchop,amount=#random-8-16;ID=cooked_porkchop,amount=#random-4-8);group(ID=fish,amount=#random-8-16;ID=cooked_fished,amount=#random-4-8);group(ID=beef,amount=#random-8-16;ID=cooked_beef,amount=#random-4-8);group(ID=chicken,amount=#random-8-16;ID=cooked_chicken,amount=#random-4-8))@luck=1
+/vegetable food (carrots, potatoes, pumpkin pie)
+group:1(group(ID=carrot,amount=#random-8-16;ID=golden_carrot,amount=#random-4-8);group(ID=potato,amount=#random-8-16;ID=baked_potato,amount=#random-4-8;ID=poisonous_potato,amount=#random-2-4);group(ID=beef,amount=#random-8-16;ID=cooked_beef,amount=#random-4-8);group(ID=pumpkin_pie,amount=#random-6-12))@luck=1
+/ender pearls and eyes 
+group(ID=ender_pearl,amount=10;ID=ender_eye,amount=5)@luck=2
+/potions
+ID=potion,damage=#randomPotionDamage,amount=#random-4-8,reinitialize=true@luck=1
+/spawn eggs
+ID=spawn_egg,damage=#randomSpawnEggDamage,amount=#random-4-8,reinitialize=true@luck=1
+/heads
+ID=skull,damage=#random-0-4,amount=#random-1-3,reinitialize=true@luck=0
+/jukebox music discs
+group(ID=jukebox;ID=#random-2256-2267,amount=#random-1-3,reinitialize=true)@luck=1
+/brewing
+group(ID=ender_pearl,amount=#random-1-3;ID=blaze_rod,amount=#random-1-3;ID=ghast_tear,amount=#random-1-3;ID=gold_nugget,amount=#random-1-3;ID=nether_wart,amount=#random-1-3;ID=spider_eye,amount=#random-1-3;ID=fermented_spider_eye,amount=#random-1-3;ID=blaze_powder,amount=#random-1-3;ID=magma_cream,amount=#random-1-3;ID=ender_eye,amount=#random-1-3;ID=382,amount=#random-1-3;type=particle,ID=2002,damage=3)@luck=2
+/redstone
+group(ID=dispenser,amount=#random-2-4;ID=noteblock,amount=1;ID=sticky_piston,amount=#random-2-4;ID=piston,amount=4;ID=tnt,amount=#random-4-6;ID=lever,amount=2;ID=stone_pressure_plate,amount=2;ID=wooden_pressure_plate,amount=2;ID=redstone_torch,amount=8;ID=stone_button,amount=2;ID=trapdoor,amount=2;ID=fence_gate,amount=1;ID=redstone_lamp,amount=4;ID=tripwire_hook,amount=2;ID=wooden_button,amount=2;ID=light_weighted_pressure_plate,amount=1;ID=heavy_weighted_pressure_plate,amount=1;ID=daylight_detector,amount=1;ID=hopper,amount=4;ID=dropper,amount=#random-2-4;ID=wooden_door,amount=1;ID=iron_door,amount=1;ID=redstone,amount=#random-32-64;ID=repeater,amount=8;ID=comparator,amount=2;type=particle,ID=2002,damage=9)@luck=2
+/colorful
+group(group:1(ID=wool,damage=#random-0-15,amount=#random-32-64,reinitialize=true;ID=stained_hardened_clay,damage=#random-0-15,amount=#random-32-64,reinitialize=true;ID=dye,damage=#random-0-15,amount=#random-32-64,reinitialize=true);type=particle,ID=2002,damage=#randomPotionEffect,amount=20,reinitialize=true)@luck=1
+/iron, gold, diamond, emerald with fireworks
+group(ID=iron_ingot,amount=#random-8-16;ID=gold_ingot,amount=#random-8-16;ID=diamond,amount=#random-8-16;ID=emerald,amount=#random-8-16;type=entity,ID=fireworks,NBTTag=#randomFireworkRocket,amount=20,scatterOffset=0-2,reinitialize=true)@luck=2
+/quartz
+group(ID=stone_slab,damage=7,amount=#random-4-8;ID=quartz_ore,amount=#random-16-32;ID=quartz_block,amount=#random-4-8;ID=quartz_block,damage=1,amount=#random-4-8;ID=quartz_block,damage=2,amount=#random-4-8;ID=quartz_stairs,amount=#random-4-8;ID=quartz,amount=#random-24-32;type=particle,ID=2002,damage=14)@luck=1
+/fish
+group(ID=fishing_rod;ID=#random-349-350,damage=#random-0-3,amount=#random-10-20,reinitialize=true)@luck=1
+/message with mushroom
+group(type=command,ID="/tell #playerName Listen to me, #playerName. You are in grave danger. You need to run. Now. Take this mushroom, it is your only hope.",commandSender="PlayerInDistress";ID=red_mushroom,NBTTag=(display=(Name="#cOnly Hope")))@luck=-1;
+/#random jokes
+group:1(ID=clock,NBTTag=(display=(Name="You're wasting your time"));ID=fish,damage=2,NBTTag=(display=(Name="I'm funny"));ID=fish,damage=3,NBTTag=(display=(Name="Oooooh!")))@luck=-1
+/flowers
+group(ID=red_flower,damage=#random-0-8,amount=64,reinitialize=true)@luck=0
+/enchantment books
+ID=enchanted_book,NBTTag=(ench=#randomEnchantment),amount=#random-7-10,reinitialize=true@luck=1
+/potatoes
+group(ID=minecraft:potato,amount=#random-2-3;ID=TestEnviromentMod:PotatoBlock,amount=#random-0-4;ID=TestEnviromentMod:CharredPotato,amount=#random-0-2;ID=minecraft:baked_potato,amount=#random-0-12;ID=TragicMC:potatoBlock,amount=#random-2-4;ID=393,amount=#random-5-10)
+/AEQuartz
+group(ID=appliedenergistics2:item.ItemMultiMaterial,amount=#random-0-64;ID=appliedenergistics2:item.ItemMultiMaterial,damage=1,amount=#random-0-64;ID=appliedenergistics2:item.ItemMultiMaterial,damage=10,amount=#random-0-64)
+/Fluix
+group(ID=appliedenergistics2:item.ItemMultiMaterial,damage=7,amount=#random-0-64;ID=appliedenergistics2:item.ItemMultiMaterial,damage=12,amount=#random-0-64;ID=appliedenergistics2:item.ItemMultiMaterial,damage=8,amount-0-64)
+/Endercore
+ID=ExtraUtilities:decorativeBlock1,damage=11,amount=#random-1-10
+/Portal to Deepdark
+ID=ExtraUtilities:dark_portal
+/Wings
+ID=ExtraUtilities:angelRing,damage=#random-0-4
+/MFR Blocks
+group(ID=937,damage=#random-0-1,amount=#random-0-4;ID=938,damage=#random-0-15,amount=#random-0-6)
+/Energy Cells
+ID=ThermalExpansion:Cell,damage=#random-1-4
+/Portable Tanks
+ID=ThermalExpansion:Tank, damage=#random-1-4
+/Tesseract
+ID=ThermalExpansion:Tesseract,amount=2
+/OpenBlock Tanks
+ID=OpenBlocks:tank,amount=6
+/========== ENTITIES ==========
+/Ghast 10
+type=entity,ID=Ghast,amount=10,scatterOffset=8-10
+/Blaze 10
+type=entity,ID=Blaze,amount=10,scatterOffset=8-10
+/Enderman 10
+type=entity,ID=Enderman,amount=10,scatterOffset=8-10
+/CaveSpider 10
+type=entity,ID=CaveSpider,amount=10,scatterOffset=8-10
+/Zombies 20
+type=entity,ID=Zombie,amount=20,scatterOffset=1-2
+/Creepers 20
+type=entity,ID=Creeper,amount=20,scatterOffset=1-2
+/Skeletons 20
+type=entity,ID=Skeleton,amount=20,scatterOffset=1-2
+/Spiders 20
+type=entity,ID=Spider,amount=20,scatterOffset=1-2
+/Silverfish 20
+type=entity,ID=Silverfish,amount=20,scatterOffset=1-2
+/Witch 20
+type=entity,ID=Witch,amount=20,scatterOffset=1-2
+/Slime 20
+type=entity,ID=Slime,amount=20,scatterOffset=1-2
+/Ghast 20
+type=entity,ID=Ghast,amount=20,scatterOffset=1-2
+/Blaze 20
+type=entity,ID=Blaze,amount=20,scatterOffset=1-2
+/Enderman 20
+type=entity,ID=Enderman,amount=20,scatterOffset=1-2
+/CaveSpider 20
+type=entity,ID=CaveSpider,amount=20,scatterOffset=1-2
+/Zombies 50
+type=entity,ID=Zombie,amount=50,scatterOffset=8-10
+/Creepers 50
+type=entity,ID=Creeper,amount=50,scatterOffset=8-10
+/Skeletons 50
+type=entity,ID=Skeleton,amount=50,scatterOffset=8-10
+/Spiders 50
+type=entity,ID=Spider,amount=50,scatterOffset=8-10
+/Silverfish 50
+type=entity,ID=Silverfish,amount=50,scatterOffset=8-10
+/Witch 50
+type=entity,ID=Witch,amount=50,scatterOffset=8-10
+/Slime 50
+type=entity,ID=Slime,amount=50,scatterOffset=8-10
+/Ghast 50
+type=entity,ID=Ghast,amount=50,scatterOffset=8-10
+/Blaze 50
+type=entity,ID=Blaze,amount=50,scatterOffset=8-10
+/Enderman 50
+type=entity,ID=Enderman,amount=50,scatterOffset=8-10
+/CaveSpider 50
+type=entity,ID=CaveSpider,amount=50,scatterOffset=8-10
+
+
+/passive mobs
+group:1(type=entity,ID=Pig,NBTTag=(CustomName="#e#lLucky Pig",CustomNameVisible=true);type=entity,ID=Cow,NBTTag=(CustomName="#e#lLucky Cow",CustomNameVisible=true);type=entity,ID=Chicken,NBTTag=(CustomName="#e#lLucky Chicken",CustomNameVisible=true);type=entity,ID=Sheep,NBTTag=(CustomName="#e#lLucky Sheep",CustomNameVisible=true);type=entity,ID=Squid,NBTTag=(CustomName="#e#lUnlucky Squid",CustomNameVisible=true))@luck=0
+/colored sheep
+type=entity,ID=Sheep,NBTTag=(CustomName="#cM#6r. #eR#aa#2i#bn#3b#5o#dw",CustomNameVisible=true,Color=#random-0-15b),scatterOffset=4-4,adjustHeight=2,amount=16,relativeToPlayer=true,reinitialize=true@luck=1
+/lucky eggs
+type=entity,ID=luckyegg,amount=20@luck=2
+/launched expbottles
+type=entity,ID=launched_expbottle,amount=#random-16-32@luck=2
+/launched tnt
+type=entity,ID=launched_tnt,amount=15@luck=-2
+/lightning creeper
+group(type=difficulty,ID=hard;type=entity,ID=Creeper;type=entity,ID=lightning)@luck=-2
+/giant
+group(type=difficulty,ID=hard;type=entity,ID=Giant)@luck=-2
+/wither
+group(type=difficulty,ID=hard;type=entity,ID=WitherBoss)@chance=0.1@luck=-2
+/ghast
+group(type=difficulty,ID=hard;type=entity,ID=Ghast)@chance=0.2@luck=-2
+/bob the decked zombie
+group(type=difficulty,ID=hard;type=entity,ID=Zombie,NBTTag=(Equipment=[(ID=diamond_sword,Count=1,Damage=0,tag=(ench=#luckySwordEnchantments)),(ID=diamond_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(ID=diamond_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(ID=diamond_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(ID=diamond_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],CustomName="#e#lBob",CustomNameVisible=true))@luck=-2
+/stacked villager and pigs
+type=entity,ID=Villager,NBTTag=(Riding=(ID=Pig,Riding=(ID=Pig,Riding=(ID=Pig,Riding=(ID=Pig,Riding=(ID=Pig,Riding=(ID=Pig,Riding=(ID=Pig))))))))@luck=0
+/horses
+type=entity,ID=EntityHorse,amount=12,scatterOffset=4-4,adjustHeight=2,reinitialize=true,NBTTag=(Type=#random-0-4,Owner=#playerName)@luck=1
+/witch with bats
+group(type=difficulty,ID=hard;type=entity,ID=Witch,adjustHeight=1;type=entity,ID=Bat,amount=64,posY=#bPosY+#random-0-2,scatterOffset=0-1,adjustHeight=1,reinitialize=true)@luck=-1
+/huge slime and magma cube
+group:1(type=entity,ID=Slime,NBTTag=(Size=10);type=entity,ID=LavaSlime,NBTTag=(Size=10))@luck=-2
+/pet wolves
+group(type=particle,ID="heart",amount=20,scatterOffset=0-2,reinitialize=true;type=entity,ID=Wolf,amount=#random-5-10,scatterOffset=3-3,adjustHeight=1,reinitialize=true,NBTTag=(CollarColor=#random-0-14,Owner=#playerName,Sitting=1))@luck=1
+/pet cats
+group(type=particle,ID="heart",amount=20,scatterOffset=0-2,reinitialize=true;type=entity,ID=Ozelot,amount=#random-5-10,scatterOffset=3-3,adjustHeight=1,reinitialize=true,NBTTag=(CatType=#random-0-3,Owner=#playerName,Sitting=1))@luck=1
+/lucky villagers
+type=entity,ID=Villager,NBTTag=(Offers=(Recipes=[(buy=(ID=diamond,Count=#random-20-25),sell=(ID=golden_sword,Count=1,tag=(ench=#luckySwordEnchantments,display=(Name="#e#lLucky Sword"))),maxUses=1),(buy=(ID=diamond,Count=#random-20-25),sell=(ID=bow,Count=1,tag=(ench=#luckyBowEnchantments,display=(Name="#e#lLucky Bow"))),maxUses=1),(buy=(ID=diamond,Count=#random-10-15),sell=(ID=fishing_rod,Count=1,tag=(ench=#luckyFishingRodEnchantments,display=(Name="#e#lLucky Fishing Rod"))),maxUses=1),(buy=(ID=diamond,Count=#random-10-15),sell=(ID=potion,Damage=8195,Count=1,tag=(CustomPotionEffects=#luckyPotionEffects,display=(Name="#e#lLucky Potion"))),maxUses=1),(buy=(ID=diamond,Count=#random-7-12),sell=(ID=potion,Damage=16428,Count=1,tag=(CustomPotionEffects=#unluckyPotionEffects,display=(Name="#e#lUnlucky Potion"))),maxUses=1)]),CustomName="#e#lLucky Villager",CustomNameVisible=true)@luck=1
+type=entity,ID=Villager,NBTTag=(Offers=(Recipes=[(buy=(ID=diamond,Count=#random-12-17),sell=(ID=golden_helmet,Count=1,tag=(ench=#luckyHelmetEnchantments,display=(Name="#e#lLucky Helmet"))),maxUses=1),(buy=(ID=diamond,Count=#random-20-25),sell=(ID=golden_chestplate,Count=1,tag=(ench=#luckyChestplateEnchantments,display=(Name="#e#lLucky Chestplate"))),maxUses=1),(buy=(ID=diamond,Count=#random-15-20),sell=(ID=golden_leggings,Count=1,tag=(ench=#luckyLeggingsEnchantments,display=(Name="#e#lLucky Leggings"))),maxUses=1),(buy=(ID=diamond,Count=#random-12-17),sell=(ID=golden_boots,Count=1,tag=(ench=#luckyBootsEnchantments,display=(Name="#e#lLucky Boots"))),maxUses=1)]),CustomName="#e#lLucky Villager",CustomNameVisible=true)@luck=1
+type=entity,ID=Villager,NBTTag=(Offers=(Recipes=[(buy=(ID=diamond,Count=#random-10-15),sell=(ID=golden_shovel,Count=1,tag=(ench=#luckyToolEnchantments,display=(Name="#e#lLucky Shovel"))),maxUses=1),(buy=(ID=diamond,Count=#random-15-20),sell=(ID=golden_pickaxe,Count=1,tag=(ench=#luckyToolEnchantments,display=(Name="#e#lLucky Pickaxe"))),maxUses=1),(buy=(ID=diamond,Count=#random-15-20),sell=(ID=golden_axe,Count=1,tag=(ench=#luckyAxeEnchantments,display=(Name="#e#lLucky Axe"))),maxUses=1),(buy=(ID=diamond,Count=#random-10-15),sell=(ID=golden_hoe,Count=1,tag=(ench=#luckyToolEnchantments,display=(Name="#e#lLucky Hoe"))),maxUses=1)]),CustomName="#e#lLucky Villager",CustomNameVisible=true)@luck=1
+
+/lightning creeper
+group(type=difficulty,ID=3;type=entity,name=Creeper;type=entity,name=lightning)
+
+/giant and wither
+group(type=difficulty,ID=3;group:1(type=entity,name=Giant;type=entity,name=WitherBoss))
+
+/Ent
+type=entity,ID=forestmobs.ent,amount=1
+
+/Geken
+type=entity,ID=junglemobs.geken,amount=1
+
+/Tarantula
+type=entity,ID=junglemobs.tarantula,amount=1
+
+/NetherSouls
+type=entity,ID=demonmobs.behemoth,amount=2
+
+/NetherSouls
+type=entity,ID=demonmobs.nethersoul,amount=4
+
+/HellCows
+type=entity,ID=arsmagica2.HellCow,amount=2
+
+/Ghast
+type=entity,ID=Ghast,amount=#random-1-4
+
+/Cacodemon
+type=entity,ID=demonmobs.cacodemon,amount=1
+
+/Trent
+type=entity,ID=forestmobs.trent,amount=1
+
+/Maka
+type=entity,ID=plainsmobs.maka,amount=1
+
+/Kobold
+type=entity,ID=plainsmobs.kobold,amount=2
+
+/WaterGuardian
+type=entity,ID=arsmagica2.BossWaterGuardian,amount=1
+
+/SilverFish
+type=entity,ID=Silverfish,amount=12
+
+/Amanda
+type=entity,ID=arsmagica2.MobDryad,NBTTag=tag(text=CustomName(§e§lAmanda),flag=CustomNameVisible(true)))
+
+/lightning creeper
+group(type=difficulty,ID=3;type=entity,ID=Creeper;type=entity,ID=lightning)
+
+/Demon
+type=entity,ID=witchery.demon,amount=2
+
+/Mandrakes
+type=entity,ID=witchery.mandrake,amount=5
+
+/Witchery Ent
+type=entity,ID=witchery.ent
+
+/Baba yaba
+type=entity,ID=witchery.babayaga
+
+/Nightmare
+type=entity,ID=witchery.nightmare
+
+/Giant brainy Zombie
+type=entity,ID=Thaumcraft.GiantBrainyZombie
+
+/Travelling Chest
+type=entity,ID=Thaumcraft.TravelingTrunk
+
+/Taint Tentacle
+type=entity,ID=Thaumcraft.TaintacleTiny
+
+/Taint Villager
+type=entity,ID=Thaumcraft.TaintedVillager
+
+/Pech
+type=entity,ID=Thaumcraft.Pech
+
+/Hectate
+type=entity,ID=arsmagica2.MobHecate
+
+/Mage Villager
+type=entity,ID=arsmagica2.MobMageVillager
+
+/Arcane Guardian
+type=entity,ID=arsmagica2.BossArcaneGuardian
+
+/Bible Demon
+type=entity,ID=AWWayofTime.BileDemon
+
+/Boulder Fist
+type=entity,ID=AWWayofTime.BoulderFist
+
+/Holy Elemental
+type=entity,ID=AWWayofTime.HolyElemental
+
+/Joust Alpha
+type=entity,ID=desertmobs.joustalpha
+
+/Crusk
+type=entity,ID=desertmobs.crusk
+
+/Reiver
+type=entity,ID=arcticmobs.reiver
+
+/Lobber
+type=entity,ID=infernomobs.lobber,amount=2
+
+/Ettin
+type=entity,ID=swampmobs.ettin,amount=2
+
+/Troll
+type=entity,ID=mountainmobs.troll,amount=2
+
+/Cinder
+type=entity,ID=infernomobs.cinder,amount=2
+
+/Ren
+type=entity,ID=Skeleton,NBTTag=tag(text=CustomName(Reninsane's Remains),flag=CustomNameVisible(true)))
+
+/EnderDragon
+type=entity,ID=EnderDragon,NBTTag=tag(text=CustomName(IT'S THE END),flag=CustomNameVisible(true)))
+
+/Frostweaver
+type=entity,ID=arcticmobs.frostweaver
+
+/Belph
+type=entity,ID=demonmobs.belph
+
+/Pinky
+type=entity,ID=demonmobs.pinky,amount=2
+
+/Trite
+type=entity,ID=demon,obs.trite,amount=4
+
+/Asmodi
+type=entity,ID=demonmobs.asmodi
+
+/Clink
+type=entity,ID=desertmobs.clink
+
+/Erepede
+type=entity,ID=desertmobs.erepede
+
+/Jabbawock
+type=entity,ID=mountainmobs.jabberwock,amount=5
+
+/Fallen Angel
+type=entity,ID=AWWayofTime.FallenAngel
+
+/Lower Demon
+type=entity,ID=AWWayofTime.LowerGuardian
+
+/Winged Fire Demon
+type=entity,ID=AWWayofTime.WingedFireDemon
+
+/Earth Golem
+type=entity,ID=AWWayofTime.SmallEarthGolem
+
+/Ice Demon
+type=entity,ID=AWWayofTime.IceDemon
+
+/Shade
+type=entity,ID=AWWayofTime.Shade
+
+/Air elemental
+type=entity,ID=AWWayofTime.AirElemental
+
+/Water Elemental
+type=entity,ID=AWWayofTime.WaterElemental
+
+/Earth elemental
+type=entity,ID=AWWayofTime.EarthElemental
+
+/Fire elemental
+type=entity,ID=AWWayofTime.FireElemental
+
+/Shade Elemental
+type=entity,ID=AWWayofTime.ShadeElemental
+
+/Earth elemental 2
+type=entity,ID=arsmagica2.EarthElemental,amount=3
+
+/Mob Fire Elemental
+type=entity,ID=arsmagica2.MobFireElemental,amount=3
+
+/Water Element
+type=entity,ID=arsmagica2.MobWaterElemental,amount=3
+
+/Light and Dark mages
+group(type=entity,ID=arsmagica2.MobLightMage,amount=3,reinitialize=true,type=entity,ID=arsmagica2.MobDarkMage,amount=4,reinitialize=true)
+
+/Darklings
+type=entity,ID=arsmagica2.MobDarkling,amount=5
+
+/Nature Guardian
+type=entity,ID=arsmagica2.BossNatureGuardian
+
+/Earth Guardian
+type=entity,ID=arsmagica2.BossEarthGuardian
+
+/Winter Guardian
+type=entity,ID=arsmagica2.BossWinterGuardian
+
+/Air Guardian
+type=entity,ID=arsmagica2.BossAirGuardian
+
+/Fire Guardian
+type=entity,ID=arsmagica2.BossFireGuardian
+
+/Thaum Slimes
+type=entity,ID=Thaumcraft.ThaumSlime,amount=5
+
+/Taint Spider
+type=entity,ID=Thaumcraft.TaintSpider,amount=7
+
+/Tainticle
+type=entity,ID=Thaumcraft.Taintacle,amount=5
+
+/roc
+type=entity,ID=plainsmobs.roc,amount=1
+/grue
+type=entity,ID=shadowmobs.grue,amount=1
+/wendigo
+type=entity,ID=arcticmobs.wendigo,amount=1
+/lobber
+type=entity,ID=infernomobs.lobber,amount=1
+/stackedmandrake
+type=entity,ID=witchery.mandrake,NBTTag=(Riding=(ID=witchery.mandrake,Riding=(ID=witchery.mandrake,Riding=(ID=witchery.mandrake,Riding=(ID=witchery.mandrake,Riding=(ID=witchery.mandrake,Riding=(ID=witchery.mandrake,Riding=(ID=witchery.mandrake))))))))@luck=0
+/EnderDragon
+type=entity,ID=EnderDragon,amount=1
+/jengu
+type=entity,ID=freshwatermobs.jengu,amount=2@luck=0
+/HugeCinders
+type=entity,ID=infernomobs.cinder,NBTTag=(Size=10),amount=1
+/BigNethersoul
+type=entity,ID=demonmobs.nethersoul,NBTTag=(Size=10)
+/FlyingSheep
+type=entity,ID=mountainmobs.yale,NBTTag=(ExtraBehaviour=(FlightOverride=true)),amount=2
+
+/Jabba
+type=entity,ID=TragicMC.Jabba,amount=2
+
+/Plague
+type=entity,ID=TragicMC.Plague,amount=6
+
+/Gragul
+type=entity,ID=TragicMC.Gragul,amount=2
+
+/Minotaur
+type=entity,ID=TragicMC.Minotaur,amount=2
+
+/Inkling
+type=entity,ID=TragicMC.Inkling,amount=2
+
+/Ragr
+type=entity,ID=TragicMC.Ragr
+
+/Nor-vox
+type=entity,ID=TragicMC.NorVox,amount=2
+
+/Sirv
+type=entity,ID=TragicMC.Sirv,amount=2
+
+/Jarra
+type=entity,ID=TragicMC.Jarra
+
+/TragicMC.VoxStellarum
+type=entity,ID=TragicMC.VoxStellarum
+
+/TragicMC.Apis
+type=entity,ID=TragicMC.Apis
+
+/TragicMC.DeathReaper
+type=entity,ID=TragicMC.DeathReaper
+
+/TragicMC.TimeController
+type=entity,ID=TragicMC.TimeController
+
+/TragicMC.Enyvil
+type=entity,ID=TragicMC.Enyvil
+
+/MutantCreatures.MutantCreeper
+type=entity,ID=MutantCreatures.MutantCreeper
+
+/MutantCreatures.MutantZombie
+type=entity,ID=MutantCreatures.MutantZombie
+
+/MutantCreatures.MutantEnderman
+type=entity,ID=MutantCreatures.MutantEnderman
+
+/MutantCreatures.MutantSkeleton
+type=entity,ID=MutantCreatures.MutantSkeleton
+
+/primitivemobs.RocketCreeper
+type=entity,ID=primitivemobs.RocketCreeper.amount=4
+
+/primitivemobs.SupportCreeper
+type=entity,ID=primitivemobs.SupportCreeper,amount=10
+
+/primitivemobs.TreasureSlime
+type=entity,ID=primitivemobs.TreasureSlime,amount=10
+
+/primitivemobs.MimicChest
+type=entity,ID=primitivemobs.MimicChest,amount=5
+
+/primitivemobs.MotherSpider
+type=entity,ID=primitivemobs.MotherSpider,amount=2
+
+/primitivemobs.Summoner
+type=entity, ID=primitivemobs.Summoner,amount=2
+/========== STRUCTURES ==========
+
+/traps
+type=structure,ID=anvil_trap,relativeToPlayer=true@luck=-2
+type=structure,ID=lava_trap,relativeToPlayer=true@luck=-2
+type=structure,ID=water_trap,relativeToPlayer=true@luck=-2
+type=structure,ID=pit_trap,relativeToPlayer=true@luck=-2
+
+/lucky fort and temple
+type=structure,ID=fort,relativeToPlayer=true@luck=2
+type=structure,ID=temple,relativeToPlayer=true@chance=0.4@luck=2
+
+/falling blocks (iron, gold, diamond, emerald)
+type=falling_block,ID=iron_block@luck=0
+type=falling_block,ID=gold_block@luck=0
+type=falling_block,ID=diamond_block@luck=1
+type=falling_block,ID=emerald_block@luck=1
+
+/bedrock problem
+type=structure,ID=bedrock_problem@luck=-1
+
+/explosion
+group(type=difficulty,ID=hard;type=structure,ID=explosion,damage=6)@luck=-2
+
+/colorful pole
+group(type=falling_block,ID=stained_hardened_clay,damage=14;type=falling_block,ID=stained_hardened_clay,damage=1,posY=#bPosY+10;type=falling_block,ID=stained_hardened_clay,damage=4,posY=#bPosY+20;type=falling_block,ID=stained_hardened_clay,damage=5,posY=#bPosY+30;type=falling_block,ID=stained_hardened_clay,damage=3,posY=#bPosY+40;type=falling_block,ID=stained_hardened_clay,damage=11,posY=#bPosY+50;type=falling_block,ID=stained_hardened_clay,damage=10,posY=#bPosY+60;type=falling_block,ID=stained_hardened_clay,damage=2,posY=#bPosY+70;type=falling_block,ID=stained_hardened_clay,damage=6,posY=#bPosY+80;type=falling_block,ID=diamond_block,posY=#bPosY+90)@luck=2
+
+/chests
+type=structure,ID=chest,NBTTag=(type="bonusChest")@luck=0
+type=structure,ID=chest,NBTTag=(type="dungeonChest")@luck=1
+type=structure,ID=chest,NBTTag=(type="villageBlacksmith")@luck=1
+type=structure,ID=chest,NBTTag=(items=[(ID=iron_ingot,maxAmount=8,weight=10),(ID=gold_ingot,maxAmount=4,weight=10),(ID=emerald,maxAmount=4,weight=10),(ID=diamond,maxAmount=4,weight=10),(ID=lucky:lucky_block,maxAmount=2,weight=10),(ID=golden_apple,maxAmount=2,weight=10),(ID=golden_apple,damage=1,maxAmount=1,weight=5)],min=8,max=8)@luck=2
+
+/choice of 2 lucky blocks
+type=structure,ID=lucky_choice,relativeToPlayer=true@luck=0
+
+/wishing wells
+group(type=structure,ID=wishing_well;type=message,ID="A wishing well? Maybe you should throw in a coin...";type=command,ID="/give #playerName gold_nugget 1 0 {display:{Name:\"#6Coin\"}}";type=block,ID=lucky:lucky_block,posY=#bPosY-3,NBTTag=(Drops=["group(type=message,ID=\"#bYour wish came true!\";type=block,ID=air,posY='#'bPosY+3;type=block,ID=beacon,posY='#'bPosY+2;type=entity,ID=fireworks,NBTTag='#'#randomFireworkRocket,amount=20,posY='#'bPosY+3,scatterOffset=2-2,reinitialize=true;ID=gold_ingot,amount=#random-20-30,posY='#'bPosY+10,scatterOffset=2-2;ID=emerald,amount=#random-20-30,posY='#'bPosY+10,scatterOffset=2-2;ID=diamond,amount=#random-20-30,posY='#'bPosY+10,scatterOffset=2-2)"]))@luck=2
+group(type=structure,ID=wishing_well;type=message,ID="A wishing well? Maybe you should throw in a coin...";type=command,ID="/give #playerName gold_nugget 1 0 {display:{Name:\"#6Coin\"}}";type=block,ID=lucky:lucky_block,posY=#bPosY-3,NBTTag=(Drops=["group(type=message,ID=\"#eYour wish came true! (If you like potatoes)\";type=block,ID=air,posY='#'bPosY+3;type=block,ID=beacon,posY='#'bPosY+2;ID=potato,amount=128,posY='#'bPosY+10,scatterOffset=2-2;ID=baked_potato,amount=64,posY='#'bPosY+10,scatterOffset=2-2;ID=poisonous_potato,amount=32,posY='#'bPosY+10,scatterOffset=2-2)"]))@luck=1
+group(type=structure,ID=wishing_well;type=message,ID="A wishing well? Maybe you should throw in a coin...";type=command,ID="/give #playerName gold_nugget 1 0 {display:{Name:\"#6Coin\"}}";type=block,ID=lucky:lucky_block,posY=#bPosY-3,NBTTag=(Drops=["group(type=message,ID=\"#4Your death wish came true!\";type=block,ID=air,posY='#'bPosY+3;type=block,ID=beacon,posY='#'bPosY+2;type=entity,ID=launched_tnt,posY='#'bPosY+7,amount=20)"]))@luck=-2
+group(type=structure,ID=wishing_well;type=message,ID="A wishing well? Maybe you should throw in a coin...";type=command,ID="/give #playerName gold_nugget 1 0 {display:{Name:\"#6Coin\"}}";type=block,ID=lucky:lucky_block,posY=#bPosY-3,NBTTag=(Drops=["group(type=message,ID=\"#4MWAHAHA!\";type=block,ID=air,posY='#'bPosY+3;type=block,ID=beacon,posY='#'bPosY+2;type=entity,ID=Blaze,posY='#'bPosY+7,amount=20)"]))@luck=-2
+
+/========== MONSTER APOCALYPSE ==========
+
+/sword, difficulty, time, potion effects
+group(ID=wooden_sword;type=difficulty,ID=hard;type=time,ID=18750;type=effect,ID=2,duration=30,damage=4;type=effect,ID=8,duration=30;type=effect,ID=15,duration=30;>
+/zombies, creepers, spiders + cave spiders
+group:1(type=entity,ID=Zombie,amount=#random-20-50,scatterOffset=8-10,adjustHeight=2,reinitialize=true;type=entity,ID=Creeper,amount=#random-10-30,scatterOffset=8-10,adjustHeight=2,reinitialize=true;group(type=entity,ID=Spider,amount=#random-15-45,scatterOffset=8-10,adjustHeight=2,reinitialize=true;type=entity,ID=CaveSpider,amount=#random-5-10,scatterOffset=8-10,adjustHeight=2,reinitialize=true);>
+/all
+group(type=entity,ID=Zombie,amount=#random-20-50,scatterOffset=8-10,adjustHeight=2,reinitialize=true;type=entity,ID=Creeper,amount=#random-10-30,scatterOffset=8-10,adjustHeight=2,reinitialize=true;group(type=entity,ID=Spider,amount=#random-15-45,scatterOffset=8-10,adjustHeight=2,reinitialize=true;type=entity,ID=CaveSpider,amount=#random-5-10,scatterOffset=8-10,adjustHeight=2,reinitialize=true))))@luck=-2
+/BobARMY
+group(type=difficulty,ID=hard;type=entity,ID=Zombie,amount=6,NBTTag=(Equipment=[(id=diamond_sword,Count=1,Damage=0,tag=(ench=#luckySwordEnchantments)),(id=diamond_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=diamond_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=diamond_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=diamond_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],CustomName="#e#lBOBARMY",CustomNameVisible=true))@luck=-2
+
+/========== ENCHANTED ITEMS ==========
+
+/lucky block book
+ID=written_book,NBTTag=(author="PlayerInDistress",title="#e#lLucky Block Book",pages=["#l#nThe Lucky Block#r\n\nThe Lucky Block (#ofortunus blockus#r) was brought to Minecraft by the gods to reward the good and punish the evil.","The player's true self will be revealed after mining this block.\n\nSome fear it, and others have been made rich by it.","You must mine it and be prepared for whatever will follow.\n\nIt is not luck.\n\nIt is #bdestiny."])@luck=0
+/lucky sword
+ID=golden_sword,NBTTag=(ench=#luckySwordEnchantments,display=(Name="#e#lLucky Sword"))@luck=2
+/lucky bow
+ID=bow,NBTTag=(ench=#luckyBowEnchantments,display=(Name="#e#lLucky Bow"))@luck=2
+/lucky fishing rod
+ID=fishing_rod,NBTTag=(ench=#luckyFishingRodEnchantments,display=(Name="#e#lLucky Fishing Rod"))@luck=2
+/lucky tools
+group:#random-1-2(ID=golden_shovel,NBTTag=(ench=#luckyToolEnchantments,display=(Name="#e#lLucky Shovel"));ID=golden_pickaxe,NBTTag=(ench=#luckyToolEnchantments,display=(Name="#e#lLucky Pickaxe"));ID=golden_axe,NBTTag=(ench=#luckyAxeEnchantments,display=(Name="#e#lLucky Axe"));ID=golden_hoe,NBTTag=(ench=#luckyToolEnchantments,display=(Name="#e#lLucky Hoe")))@luck=2
+/lucky armor
+group:#random-1-2(ID=golden_helmet,NBTTag=(ench=#luckyHelmetEnchantments,display=(Name="#e#lLucky Helmet"));ID=golden_chestplate,NBTTag=(ench=#luckyChestplateEnchantments,display=(Name="#e#lLucky Chestplate"));ID=golden_leggings,NBTTag=(ench=#luckyLeggingsEnchantments,display=(Name="#e#lLucky Leggings"));ID=golden_boots,NBTTag=(ench=#luckyBootsEnchantments,display=(Name="#e#lLucky Boots")))@luck=2
+/lucky potion
+ID=potion,damage=8195,NBTTag=(CustomPotionEffects=#luckyPotionEffects,display=(Name="#e#lLucky Potion"))@luck=2
+/unlucky potion
+ID=potion,damage=16428,NBTTag=(CustomPotionEffects=#unluckyPotionEffects,display=(Name="#e#lUnlucky Potion"))@luck=1
+/BootySlapper
+ID=diamond_shovel,NBTTag=(ench=#luckySwordEnchantments,display=(Name="#bBootySlapper"))@luck=2
+/Betty
+ID=diamond_axe,NBTTag=(ench=#luckySwordEnchantments,display=(Name="#bBetty"))@luck=2
+/ShesaHoe
+ID=diamond_hoe,NBTTag=(ench=#luckyFishingRodEnchantment,display=(Name="#bPaulyaulk Hoe"))@luck=2
+/TheLostPickaxe
+ID=diamond_pickaxe,NBTTag=(ench=#luckySwordEnchantments,display=(Name="#bTheLostPickaxe"))@luck=1
+
+/========== Tinker's Construct ==========
+/Seared Brick
+ID=TConstruct:Smeltery,damage=2,amount=#random-10-64
+/Blank Pattern
+ID=TConstruct:blankPattern,amount=#random-1-64
+/Blank Cast
+ID=TConstruct:blankPattern,damage=1,amount=#random-1-10
+/Necrotic Bone
+ID=TConstruct:materials,damage=8,amount=#random-1-5
+/Heart Canister
+ID=TConstruct:heartCanister,damage=2,amount=1
+/Knapsack
+ID=TConstruct:knapsack,amount=1
+/Essence Berries
+group(ID=TConstruct:ore.berries.two,damage=5,amount=#random-1-64;ID=TConstruct:oreBerries,damage=5,amount=#random-1-5)
+/Manyullyn Ingots
+ID=TConstruct:materials,damage=5,amount=#random-1-32
+/Smeltery
+group(ID=TConstruct:Smeltery,damage=2,amount=#random-32-64;ID=TConstruct:Smeltery;ID=TConstruct:Smeltery,damage=1,amount=##random-1-4;ID=TConstruct:SearedBlock,amount=##random-1-4;ID=TConstruct:SearedBlock,damage=2,amount=##random-1-4)
+/Jeweled Apples
+ID=TConstruct:diamonApple,amount=#random-1-5
+/Pixie Jar
+ID=BiomesOPlenty:jarFilled,damage=2,amount=#random-1-2
+/Golden Head
+ID=TConstruct:goldHead,amount=1
+/Coagulated Blood
+group(ID=TConstruct:strangeFood,damage=1,amount=#random-1-64;ID=TConstruct:jerky,damage=7,amount=#random-1-64)
+/Gelatinous Slime
+group(ID=TConstruct:strangeFood,amount=#random-1-64;ID=TConstruct:jerky,damage=6,amount=#random-1-64)
+
+/========== Magical Crops ==========
+/Essence Block
+group(ID=magicalcrops:Essence Bricks,damage=#random-0-7,amount=#random-1-64;ID=magicalcrops:Essence Small Bricks,damage=#random-0-7,amount=#random-1-64;ID=magicalcrops:Essence Quarter Bricks,damage=#random-0-7,amount=#random-1-64)
+/Essence
+ID=magicalcrops:magicalcrops_MinicioEssence,amount=#random-1-64
+/Magic Fertilizer
+ID=magicalcrops:magicalcrops_GrowthPowder,amount=#random-1-10
+/Accio Sword
+ID=magicalcrops:magicalcrops_AccioSword
+/Imperio Sword
+ID=magicalcrops:magicalcrops_ImperioSword
+/Zivico Hoe
+ID=magicalcrops:magicalcrops_ZivicioHoe
+/Diamond Infused Armor
+group:#random-1-2(ID=magicalcrops:magicalcrops_ZivicioArmourHelmet;ID=magicalcrops:magicalcrops_ZivicioArmourChestplate;ID=magicalcrops:magicalcrops_ZivicioArmourLeggings;ID=magicalcrops:magicalcrops_ZivicioArmourBoots)
+
+/========== Sync ==========
+/Shell Storage
+ID=Sync:Sync_BlockPlacer,damage=1
+/Shell Constructor
+ID=Sync:Sync_BlockPlacer
+/Treadmill
+ID=Sync:Sync_BlockPlacer,damage=2
+/Sync Core
+ID=Sync:Sync_ItemPlaceholder
+
+/MagicBane
+ID=xreliquary:magicbane,damage=2
+
+/Brew of Vines
+ID=witchery:ingredient,damage=57,amount=#random-0-3
+
+/Brew of Webs
+ID=witchery:ingredient,damage=58,amount=#random-0-3
+
+/Brew of Thorns
+ID=witchery:ingredient,damage=59,amount=#random-0-3
+
+/Brew of Ink
+ID=witchery:ingredient,damage=60,amount=#random-0-3
+
+/Brew of Sprouting
+ID=witchery:ingredient,damage=61,amount=#random-0-3
+
+/Brew of Erosion
+ID=witchery:ingredient,damage=62,amount=#random-0-3
+
+/Brew of Raising
+ID=witchery:ingredient,damage=65,amount=#random-0-3
+
+/Brew of the Grotesque
+ID=witchery:ingredient,damage=71,amount=#random-0-3
+
+/Brew of Frost
+ID=witchery:ingredient,damage=76,amount=#random-0-3
+
+/Brew of the Depths
+ID=witchery:ingredient,damage=77,amount=#random-0-3
+
+/Brew of cursed leaping
+ID=witchery:ingredient,damage=86,amount=#random-0-3
+
+/Brew of Sleeping
+ID=witchery:ingredient,damage=95,amount=#random-0-3
+
+/Brew of Flowing Spirit
+ID=witchery:ingredient,damage=96,amount=#random-0-3
+
+/Brew of Bats
+ID=witchery:ingredient,damage=109,amount=#random-0-3
+
+/Sword of The Zephyr
+ID=Thaumcraft:ItemSwordElemental
+
+/Bear Trap
+ID=OpenBlocks:beartrap
+
+/Sonic Glasses
+ID=OpenBlocks:sonicglasses
+
+/Hunters Handgun
+ID=xreliquary:handgun
+
+/Magazines
+ID=xreliquary:magazine,damage=random-0-9,amount=random-0-3
+
+/Big Reactors
+group(ID=BigReactors:BRIngot,damage=#random-0-3,amount=#random-0-64;ID=BigReactors:BRIngot,damage=#random-0-3,amount=#random-0-64;ID=BigReactors:BRIngot,damage=#random-0-3,amount=#random-0-64;ID=BigReactors:BRIngot,damage=#random-0-3,amount=#random-0-64)
+
+/Farming Station
+ID=EnderIO:blockFarmStation, amount=2
+
+/Cursed Earth
+ID=ExtraUtilities:cursedearthside, amount=64
+
+/EnderQuarry
+ID=ExtraUtilities:enderQuarry
+
+/x32 Generator
+ID=ExtraUtilities:generator.64,damage=#random-0-11,amount=#random-1-3
+
+/Soul Fragment
+ID=ExtraUtilities:mini-soul,damage=3,amount=#random-1-5
+
+/Elevators
+ID=OpenBlocks:elevator,amount=#random-1-10
+
+/Life ward
+ID=arsmagica2:lifeWard
+
+/Mystery Egg
+ID=primitivemobs:primitivemobs_Egg,damage=1
+
+/Spider Egg
+ID=primitivemobs:primitivemobs_Egg
+
+/Skull Minion
+ID=primitivemobs:primitivemobs_SkullMinionOrb,amount=#random-0-128
+
+/========== Lucky Block Red ==========
+
+/joey the decked wither skelli
+group(type=difficulty,ID=hard;type=entity,ID=Skeleton,NBTTag=(SkeletonType=1,Equipment=[(id=diamond_sword,Count=1,Damage=0,tag=(ench=#luckySwordEnchantments)),(id=diamond_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=diamond_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=diamond_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=diamond_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],CustomName="#e#lJoey",CustomNameVisible=true))@luck=-1
+
+/wishing well
+group(type=structure,ID=wishing_well;type=message,ID="A wishing well? Maybe you should throw in a coin...";type=command,ID="/give #playerName gold_nugget 1 0 {display:{Name:\"#6Coin\"}}";type=block,ID=lucky:lucky_block,posY=#bPosY-3,NBTTag=(Drops=["group(type=message,ID=\"#eYour wish came true! (If you love shrub)\";type=block,ID=air,posY='#'bPosY+3;type=block,ID=beacon,posY='#'bPosY+2;ID=tallgrass,amount=128,posY='#'bPosY+10,scatterOffset=2-2;ID=tallgrass,amount=64,posY='#'bPosY+10,scatterOffset=2-2;ID=tallgrass,amount=32,posY='#'bPosY+10,scatterOffset=2-2)"]))@luck=1
+group(type=structure,ID=wishing_well;type=message,ID="A wishing well? Maybe you should throw in a coin...";type=command,ID="/give #playerName gold_nugget 1 0 {display:{Name:\"#6Coin\"}}";type=block,ID=lucky:lucky_block,posY=#bPosY-3,NBTTag=(Drops=["group(type=message,ID=\"#bYour potion-maker wish came true!\";type=block,ID=air,posY='#'bPosY+3;type=block,ID=beacon,posY='#'bPosY+2;ID=ghast_tear,amount=#random-20-30,posY='#'bPosY+10,scatterOffset=2-2;ID=nether_wart,amount=#random-20-30,posY='#'bPosY+10,scatterOffset=2-2;ID=brewing_stand,amount=2,posY='#'bPosY+10,scatterOffset=2-2)"]))@luck=1
+
+/falling block
+type=falling_block,ID=dirt@luck=-1
+group(type=falling_block,ID=diamond_block;type=falling_block,ID=emerald_block,posY=#bPosY+10;type=falling_block,ID=gold_block,posY=#bPosY+20;type=falling_block,ID=iron_block,posY=#bPosY+30;type=falling_block,ID=diamond_block,posY=#bPosY+40;type=falling_block,ID=emerald_block,posY=#bPosY+50;type=falling_block,ID=gold_block,posY=#bPosY+60;type=falling_block,ID=iron_block,posY=#bPosY+70;type=falling_block,ID=diamond_block,posY=#bPosY+90)@luck=2
+
+/villager
+type=entity,ID=Villager,NBTTag=(Offers=(Recipes=[(buy=(id=diamond,Count=#random-52-64),sell=(id=dirt,Count=1,tag=(display=(Name="#e#lLucky Dirt Block"))),maxUses=1)]),CustomName="#e#lVery Lucky Villager",CustomNameVisible=true)@luck=-1
+type=entity,ID=Villager,NBTTag=(Offers=(Recipes=[(buy=(id=cobblestone,Count=#random-7-15),sell=(id=obsidian,Count=#random-4-8),maxUses=20)]),CustomName="#e#m#lVery#r #e#lLucky Villager",CustomNameVisible=true)@luck=1
+
+/lucky fish
+ID=fish,NBTTag=(ench=#luckySwordEnchantments,display=(Name="#e#lLucky Fish"))@luck=2
+
+/drop
+ID=dirt,NBTTag=(display=(Name="#e#lLucky Dirt Block"))@luck=-1
+ID=diamond,amount=#random-10-35,NBTTag=(display=(Name="#9#lDiamonds to you!"))@luck=2
+
+/sword
+group(type=command,ID="/tell #playerName Hey #playerName, do you like bananas?",commandSender="NuclearBanana";ID=golden_sword,NBTTag=(ench=#luckySwordEnchantments,display=(Name="#7Wait, this ain't banana")))@luck=2;
+
+/entity
+/Skelli riding blaze
+type=entity,ID=Skeleton,NBTTag=(Riding=(id=Blaze)),CustomName="#eSlaze",amount=#random-2-4@luck=-1
+/Joey Colony
+group(type=difficulty,ID=hard;type=entity,ID=Skeleton,amount=3,NBTTag=(SkeletonType=1,Equipment=[(id=diamond_sword,Count=1,Damage=0,tag=(ench=#luckySwordEnchantments)),(id=diamond_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=diamond_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=diamond_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=diamond_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],CustomName="#e#lJoey Colony",CustomNameVisible=true))@luck=-2
+group(type=difficulty,ID=hard;type=entity,ID=Skeleton,amount=5,NBTTag=(SkeletonType=1,Equipment=[(id=bow,Count=1,Damage=0,tag=(ench=#luckyBowEnchantments)),(id=diamond_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=diamond_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=diamond_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=diamond_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],CustomName="#e#lJoey Colony",CustomNameVisible=true))@luck=-2
+
+/========== Lucky Block Red ==========
+
+/joey the decked wither skelli
+group(type=difficulty,ID=hard;type=entity,ID=Skeleton,NBTTag=(SkeletonType=1,Equipment=[(id=diamond_sword,Count=1,Damage=0,tag=(ench=#luckySwordEnchantments)),(id=diamond_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=diamond_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=diamond_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=diamond_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],CustomName="#e#lJoey",CustomNameVisible=true))@luck=-1
+
+/wishing well
+group(type=structure,ID=wishing_well;type=message,ID="A wishing well? Maybe you should throw in a coin...";type=command,ID="/give #playerName gold_nugget 1 0 {display:{Name:\"#6Coin\"}}";type=block,ID=lucky:lucky_block,posY=#bPosY-3,NBTTag=(Drops=["group(type=message,ID=\"#eYour wish came true! (If you love shrub)\";type=block,ID=air,posY='#'bPosY+3;type=block,ID=beacon,posY='#'bPosY+2;ID=tallgrass,amount=128,posY='#'bPosY+10,scatterOffset=2-2;ID=tallgrass,amount=64,posY='#'bPosY+10,scatterOffset=2-2;ID=tallgrass,amount=32,posY='#'bPosY+10,scatterOffset=2-2)"]))@luck=1
+group(type=structure,ID=wishing_well;type=message,ID="A wishing well? Maybe you should throw in a coin...";type=command,ID="/give #playerName gold_nugget 1 0 {display:{Name:\"#6Coin\"}}";type=block,ID=lucky:lucky_block,posY=#bPosY-3,NBTTag=(Drops=["group(type=message,ID=\"#bYour potion-maker wish came true!\";type=block,ID=air,posY='#'bPosY+3;type=block,ID=beacon,posY='#'bPosY+2;ID=ghast_tear,amount=#random-20-30,posY='#'bPosY+10,scatterOffset=2-2;ID=nether_wart,amount=#random-20-30,posY='#'bPosY+10,scatterOffset=2-2;ID=brewing_stand,amount=2,posY='#'bPosY+10,scatterOffset=2-2)"]))@luck=1
+
+/falling block
+type=falling_block,ID=dirt@luck=-1
+group(type=falling_block,ID=diamond_block;type=falling_block,ID=emerald_block,posY=#bPosY+10;type=falling_block,ID=gold_block,posY=#bPosY+20;type=falling_block,ID=iron_block,posY=#bPosY+30;type=falling_block,ID=diamond_block,posY=#bPosY+40;type=falling_block,ID=emerald_block,posY=#bPosY+50;type=falling_block,ID=gold_block,posY=#bPosY+60;type=falling_block,ID=iron_block,posY=#bPosY+70;type=falling_block,ID=diamond_block,posY=#bPosY+90)@luck=2
+
+/villager
+type=entity,ID=Villager,NBTTag=(Offers=(Recipes=[(buy=(id=diamond,Count=#random-52-64),sell=(id=dirt,Count=1,tag=(display=(Name="#e#lLucky Dirt Block"))),maxUses=1)]),CustomName="#e#lVery Lucky Villager",CustomNameVisible=true)@luck=-1
+type=entity,ID=Villager,NBTTag=(Offers=(Recipes=[(buy=(id=cobblestone,Count=#random-7-15),sell=(id=obsidian,Count=#random-4-8),maxUses=20)]),CustomName="#e#m#lVery#r #e#lLucky Villager",CustomNameVisible=true)@luck=1
+
+/lucky fish
+ID=fish,NBTTag=(ench=#luckySwordEnchantments,display=(Name="#e#lLucky Fish"))@luck=2
+
+/drop
+ID=dirt,NBTTag=(display=(Name="#e#lLucky Dirt Block"))@luck=-1
+ID=diamond,amount=#random-10-35,NBTTag=(display=(Name="#9#lDiamonds to you!"))@luck=2
+
+/sword
+group(type=command,ID="/tell #playerName Hey #playerName, do you like bananas?",commandSender="NuclearBanana";ID=golden_sword,NBTTag=(ench=#luckySwordEnchantments,display=(Name="#7Wait, this ain't banana")))@luck=2;
+
+/entity
+/Skelli riding blaze
+type=entity,ID=Skeleton,NBTTag=(Riding=(id=Blaze)),CustomName="#eSlaze",amount=#random-2-4@luck=-1
+/Joey Colony
+group(type=difficulty,ID=hard;type=entity,ID=Skeleton,amount=3,NBTTag=(SkeletonType=1,Equipment=[(id=diamond_sword,Count=1,Damage=0,tag=(ench=#luckySwordEnchantments)),(id=diamond_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=diamond_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=diamond_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=diamond_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],CustomName="#e#lJoey Colony",CustomNameVisible=true))@luck=-2
+group(type=difficulty,ID=hard;type=entity,ID=Skeleton,amount=5,NBTTag=(SkeletonType=1,Equipment=[(id=bow,Count=1,Damage=0,tag=(ench=#luckyBowEnchantments)),(id=diamond_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=diamond_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=diamond_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=diamond_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],CustomName="#e#lJoey Colony",CustomNameVisible=true))@luck=-2
+
+/====== LUCKY BLOCK BLUE =======
+
+ID=97,NBTTag=(display=(Name="#7BreakME"))@luck=-1
+ID=feather,amount=2@luck=1
+ID=snowball,amount=16@luck=0
+ID=slimeball,amount=16@luck=0
+ID=clock,NBTTag=(display=(Name="#fCheckTheTime:3"))@luck=0
+ID=ink_sack,amount=3@luck=-1
+ID=glass_bottle,amount=30@luck=0
+ID=384,amount=64@luck=2
+ID=poisonous_potato@luck=-1
+ID=name_tag,amount=4@luck=1
+ID=2261,NBTTag=(display=(Name="#dMugentaJRBeats"))@luck=0
+ID=2267,NBTTag=(display=(Name="#9RuffyBabyBeats"))@luck=0
+ID=349,NBTTag=(display=(Name="#2EatMe!))@luck=-1
+
+/SJockey
+type=entity,ID=Skeleton,NBTTag=(Riding=(id=Spider)),amount=#random-5-10@luck=-1
+/ZJockey
+type=entity,ID=Zombie,NBTTag=(Riding=(id=Spider)),amount=#random-5-10@luck=-1
+/SJockey
+type=entity,ID=Spider,NBTTag=(Riding=(id=Spider)),amount=#random-5-10@luck=-1
+/GiantJockey
+type=entity,ID=Giant,NBTTag=(Riding=(id=Giant)),amount=#random-5-10@luck=-1
+/EvilVillager
+type=entity,ID=Villager,NBTTag=(Riding=(id=Giant,Riding=(id=Giant,Riding=(id=Giant,Riding=(id=Giant,Riding=(id=Giant,Riding=(id=Giant,Riding=(id=Giant))))))))@luck=-2
+/bats
+type=entity,ID=Bat,NBTTag=(CustomName="El Force",CustomNameVisible=true),scatterOffset=4-4,adjustHeight=2,amount=120,relativeToPlayer=true,reinitialize=true@luck=0
+/moremrrainbow
+type=entity,ID=Sheep,NBTTag=(CustomName="#cM#6r. #eR#aa#2i#bn#3b#5o#dw",CustomNameVisible=true,Color=#random-0-15b),scatterOffset=4-4,adjustHeight=2,amount=160,relativeToPlayer=true,reinitialize=true@luck=1
+/FJockey
+type=entity,ID=Enderman,NBTTag=(Riding=(id=Bat)),amount=#random-5-10@luck=-1
+/creeper
+type=entity,ID=Creeper,NBTTag=(CustomName="BlowAulk",CustomNameVisible=true)
+/littlebabys
+type=entity,ID=Silverfish,NBTTag=(CustomName=" #eEvil#2Ruffy#bBaby",CustomNameVisible=true),scatterOffset=4-4,adjustHeight=2,amount=10,relativeToPlayer=true,reinitialize=true@luck=-2
+/Villagers
+type=entity,ID=Villager,NBTTag=(CustomName="Merchant",CustomNameVisible=true),amount=#random-5-10@luck=1
+/MrPorkchop
+type=entity,ID=Pig,NBTTag=(CustomName="#6M#cr. #bP#co#3r#bk#5d#2h#ao#1p",CustomNameVisible=true),scatterOffset=4-4,adjustHeight=2,amount=16,relativeToPlayer=true,reinitialize=true@luck=1
+/chickencoop
+type=entity,ID=Chicken,NBTTag=(CustomName="I'm A Chick",CustomNameVisible=true),scatterOffset=4-4,adjustHeight=2,amount=45,relativeToPlayer=true,reinitialize=true@luck=1
+/Milk4Dayz
+type=entity,ID=Cow,NBTTag=(CustomName="MilkMe",CustomNameVisible=true),scatterOffset=4-4,adjustHeight=2,amount=20,relativeToPlayer=true,reinitialize=true@luck=1
+/enderman
+type=entity,ID=Enderman,NBTTag=(CustomName="ENDERSLUT",CustomNameVisible=true),scatterOffset=4-4,adjustHeight=2,amount=13,relativeToPlayer=true,reinitialize=true@luck=-1
+/WJockey
+type=entity,ID=Witch,NBTTag=(Riding=(id=Bat)),amount=#random-7-10@luck=-1
+/SlimeJockey
+type=entity,ID=Slime,NBTTag=(Riding=(id=Bat)),CustomName="#eSlawaii",amount=#random-2-4@luck=-1
+/GhastZombie
+type=entity,ID=Giant,NBTTag=(Riding=(id=Ghast))@luck=-2
+/PartridgeinaPearTree
+type=entity,ID=Chicken,NBTTag=(CustomName="#fPartridge in a Pear Tree",CustomNameVisible=true),amount=1,relativeToPlayer=true,reinitialize=true@luck=1
+/FrenchHens
+type=entity,ID=Chicken,NBTTag=(CustomName="#6FrenchHens",CustomNameVisible=true),amount=3,relativeToPlayer=true,reinitialize=true@luck=1
+/goldrings
+ID=gold_nugget,amount=4@luck=2
+/GeeseALaying
+ID=egg,amount=5@lucky=0
+/SwansASwimming
+ID=water_bucket,amount=6@lucky=1
+/MaidsForMilking
+type=entity,ID=Cow,NBTTag=(CustomName="#6MaidsForMilking",CustomNameVisible=true),amount=8,relativeToPlayer=true,reinitialize=true@luck=1
+/LadiesDancing
+type=entity,ID=Villager,NBTTag=(CustomName="#3LadiesDancing",CustomNameVisible=true),amount=9,relativeToPlayer=true,reinitialize=true@luck=1
+/LordsALeaping
+type=entity,ID=Villager,NBTTag=(CustomName="#1LordsALeaping",CustomNameVisible=true),amount=10,relativeToPlayer=true,reinitialize=true@luck=1
+/PipersPiping
+type=entity,ID=Enderman,NBTTag=(CustomName="#3Pipers",CustomNameVisible=true),amount=11,relativeToPlayer=true,reinitialize=true@luck=1
+/=========Thanksgiving========
+/desert
+ID=cake, NBTTag=(display=(Name="#6Desert"))@luck=0
+/corn
+ID=gold_nugget,NBTTag=(display=(Name="#6corn")),amount=#random-20-59@luck=0
+/Gravy
+ID=lava_bucket,NBTTag=(display=(Name="#4HotN'Spicy Gravy"))@luck=-1
+/Turkey
+ID=cooked_chicken,NBTTag=(ench=#luckySwordEnchantment,display=(Name="#6Turkey"))@luck=2
+/Raw
+ID=chicken,NBTTag=(ench=#luckySwordEnchantments,display=(Name="#7Raw #8Chicken"))@luck=1
+/MashedPotatos
+ID=potato,NBTTag=(ench=#luckySwordEnchantments,display=(Name="#eMashedPotoatos"))@luck=1
+/Tatortots
+ID=baked_potato,NBTTag=(ench=#luckySwordEnchantments,display=(Name="#eTatortot"))@luck=1
+/Tatortots
+ID=pumpkin_pie,NBTTag=(ench=#luckySwordEnchantments,display=(Name="#6PIE!"))@luck=1

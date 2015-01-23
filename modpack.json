@@ -1,0 +1,12 @@
+{
+  "name": "Tranquility 2",
+  "title": "Tranquility 2 (V1.1)",
+  "gameVersion": "1.7.10",
+  "launch": {
+    "flags": []
+  },
+  "userFiles": {
+    "include": [
+    ]
+  }
+}
